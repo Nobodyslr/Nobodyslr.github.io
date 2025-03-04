@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <title>Portfolio</title>
+        <style>
+            footer{
+                background-color: black;
+                color: white;
+                padding: 5px 5px 5px 5px;
+                text-align: center;
+            }
+            body{
+                background:rgb(255, 255, 255);
+                margin: 0%;
+            }
+            nav{
+                text-align: end;
+                align-content: center;
+                
+            }
+            img{
+                height: 150px;
+                width: 460px;
+            }
+            
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slide {
+            min-width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            border: none;
+            border-radius: 50%;
+        }
+        .prev {
+            left: 10px;
+        }
+        .next {
+            right: 10px;
+        }
+        a{
+            color: rgb(255, 255, 255);
+        }
+        </style>
+    </head>
+    <body><div id="a" style="background-color: rgb(0, 0, 0) ; color: white; padding: 5px;" >
+        <h1>My Portfolio</h1>
+        <nav>
+            <a href="#home">Home</a>&nbsp; &nbsp; 
+            <a href="#about">About Me</a>&nbsp; &nbsp; 
+            <a href="#education">Education</a>&nbsp; &nbsp; 
+            <a href="#contact">Contact</a>&nbsp; &nbsp; 
+        </nav>
+        </div><div>
+
+        <header>
+            <div class="slider" >
+            <img src="https://th.bing.com/th/id/R.a039909fc9dc59b37c0c989f53d61bad?rik=X5RzfbvRtO%2feuA&pid=ImgRaw&r=0" alt="Image 1" class="slide">
+            <img src="https://cdn.pixabay.com/photo/2022/09/27/19/46/ai-generated-7483596_960_720.jpg" alt="Image 2" class="slide">
+            <img src="https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3Vwd2s2MTc3Nzk0MS13aWtpbWVkaWEtaW1hZ2Uta293YnN1MHYuanBn.jpg" alt="Image 3" class="slide">
+        </div>
+        </header>
+        <div >
+            <section id="about">
+                <h2 >About Me</h2>
+                <p>Hello! I'm Lovson Maharjan, a passionate  Web Developer based in Sunakothi,Lalitpur. I specialize in Website designing. I enjoy working on creative and challenging projects that push me to learn and grow.</p>
+                <p>Feel free to explore my work below or get in touch with me through the contact section.</p>
+            </section>
+
+            <section id="education">
+                <h2>Education and Qualification</h2>
+                <ul>
+                    <li><strong>BCA</strong> - Nesfield International College</li>
+                    <li><strong>+2</strong> - MOLISS</li>
+                    <li><strong>SEE</strong> - ABC</li>
+                </ul>
+            </section>
+    
+            <section>
+                <h2>Professional History</h2>
+                <ul>
+                    <li><strong>Project 1:</strong> Developer.</li>
+                    <li><strong>Project 2:</strong> Editing.</li>
+                    <li><strong>Project 3:</strong> Graphics editing.</li>
+                </ul>
+            </section>
+    
+            <section id="contact">
+                <h2>Contact me</h2>
+                <p>If you have any questions or would like to work with me, feel free to reach out:</p>
+                <p>Email: <a href="lovson@gmail.com" style="color: blue;">lovson@gmail.com</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/lovson-maharjan" style="color: blue;" target="_blank">Lovson Maharjan</a></p>
+            </section>
+        </div>
+    
+        <footer>
+            <p>&copy; 2025 Lovson. All rights reserved.</p>
+        </footer>
+        <script>
+            let index = 0;
+    
+            function moveSlide(step) {
+                const slides = document.querySelectorAll('.slide');
+                const totalSlides = slides.length;
+    
+                index += step;
+    
+                if (index >= totalSlides) {
+                    index = 0;
+                } else if (index < 0) {
+                    index = totalSlides - 1;
+                }
+    
+                document.querySelector('.slider').style.transform = `translateX(-${index * 100}%)`;
+            }
+    
+            // Optional: Auto sliding after a specific time
+            setInterval(() => {
+                moveSlide(1);
+            }, 3000);  // Change slide every 3 seconds
+        </script>
+    </body>
+</html>
