@@ -98,11 +98,24 @@
                 <p>Email: <a href="lovsonmhj@gmail.com" style="color: blue;">lovson@gmail.com</a></p>
                 <p>LinkedIn: <a href="https://www.linkedin.com/in/lovson-mhj-691b37354/" style="color: blue;" target="_blank">Lovson Maharjan</a></p>
             </section>
-            <div class="message-box">
-                <h3>Important Message</h3>
-                <p>This is a simple message box. You can put any text you like here.</p>
-                <button class="close-btn" onclick="closeMessage()">Close</button>
-            </div>
+            <div>
+                <h2>Feedback Form</h2>
+                <form>
+                    <label for="name">Your Name (Optional)</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+        
+                    <label for="email">Your Email (Optional)</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+        
+                    <label for="message">Your Feedback</label>
+                    <textarea id="message" name="message" placeholder="Write your feedback here" required></textarea>
+        
+                    <button type="submit" class="submit-btn">Submit Feedback</button>
+                </form>
+        
+                <div class="thank-you" id="thank-you-message" style="display: none;">
+                    <p>Thank you for your feedback!</p>
+                </div>
         </div>
     
         <footer>
@@ -131,10 +144,14 @@
                 moveSlide(1);
             }, 3000);
 
-            function closeMessage() {
-            var messageBox = document.querySelector('.message-box');
-            messageBox.style.display = 'none';
-        }
+            const form = document.getElementById('feedback-form');
+        const thankYouMessage = document.getElementById('thank-you-message');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); 
+            form.style.display = 'none'; 
+            thankYouMessage.style.display = 'block'; 
+        });
         </script>
     </body>
 </html>
