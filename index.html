@@ -11,6 +11,7 @@
             body{
                 background:rgb(255, 255, 255);
                 margin: 0%;
+                font-family: Arial,  sans-serif;
             }
             nav{
                 text-align: end;
@@ -56,6 +57,7 @@
             <a href="#home">Home</a>&nbsp; &nbsp; 
             <a href="#about">About Me</a>&nbsp; &nbsp; 
             <a href="#education">Education</a>&nbsp; &nbsp; 
+            <a href="#Professional">Professional History</a>&nbsp; &nbsp; 
             <a href="#contact">Contact</a>&nbsp; &nbsp; 
         </nav>
         </div><div>
@@ -65,7 +67,10 @@
             <img src="https://th.bing.com/th/id/R.a039909fc9dc59b37c0c989f53d61bad?rik=X5RzfbvRtO%2feuA&pid=ImgRaw&r=0" alt="Image 1" class="slide">
             <img src="https://cdn.pixabay.com/photo/2022/09/27/19/46/ai-generated-7483596_960_720.jpg" alt="Image 2" class="slide">
             <img src="https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3Vwd2s2MTc3Nzk0MS13aWtpbWVkaWEtaW1hZ2Uta293YnN1MHYuanBn.jpg" alt="Image 3" class="slide">
+            
         </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
         </header>
         <div >
             <section id="about">
@@ -83,12 +88,12 @@
                 </ul>
             </section>
     
-            <section>
+            <section id="Professional">
                 <h2>Professional History</h2>
                 <ul>
-                    <li><strong>Project 1:</strong> Developer.</li>
-                    <li><strong>Project 2:</strong> Editing.</li>
-                    <li><strong>Project 3:</strong> Graphics editing.</li>
+                <li>A passionate and results-driven Software Developer with over 5 years of experience in software development, web development, and IT solutions. </li>
+                 <li>  Experienced in working with modern programming languages such as JavaScript, Python, and C++, with a strong background in building and maintaining scalable applications, web platforms, and cloud infrastructure. </li> 
+                  <li> Dedicated to solving complex technical challenges and delivering high-quality user-centric solutions.</li> 
                 </ul>
             </section>
     
@@ -102,20 +107,16 @@
                 <h2>Feedback Form</h2>
                 <form>
                     <label for="name">Your Name (Optional)</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                    <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
         
                     <label for="email">Your Email (Optional)</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                    <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>
         
-                    <label for="message">Your Feedback</label>
-                    <textarea id="message" name="message" placeholder="Write your feedback here" required></textarea>
+                    <label for="message">Your Feedback</label><br>
+                    <textarea id="message" name="message" placeholder="Write your feedback here" required></textarea><br><br>
         
                     <button type="submit" class="submit-btn">Submit Feedback</button>
                 </form>
-        
-                <div class="thank-you" id="thank-you-message" style="display: none;">
-                    <p>Thank you for your feedback!</p>
-                </div>
         </div>
     
         <footer>
@@ -144,14 +145,7 @@
                 moveSlide(1);
             }, 3000);
 
-            const form = document.getElementById('feedback-form');
-        const thankYouMessage = document.getElementById('thank-you-message');
-
-        form.addEventListener('submit', function (event) {
-            event.preventDefault(); 
-            form.style.display = 'none'; 
-            thankYouMessage.style.display = 'block'; 
-        });
+        
         </script>
     </body>
 </html>
