@@ -95,9 +95,14 @@
             <section id="contact">
                 <h2>Contact me</h2>
                 <p>If you have any questions or would like to work with me, feel free to reach out:</p>
-                <p>Email: <a href="lovson@gmail.com" style="color: blue;">lovson@gmail.com</a></p>
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/lovson-maharjan" style="color: blue;" target="_blank">Lovson Maharjan</a></p>
+                <p>Email: <a href="lovsonmhj@gmail.com" style="color: blue;">lovson@gmail.com</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/lovson-mhj-691b37354/" style="color: blue;" target="_blank">Lovson Maharjan</a></p>
             </section>
+            <div class="message-box">
+                <h3>Important Message</h3>
+                <p>This is a simple message box. You can put any text you like here.</p>
+                <button class="close-btn" onclick="closeMessage()">Close</button>
+            </div>
         </div>
     
         <footer>
@@ -125,6 +130,11 @@
             setInterval(() => {
                 moveSlide(1);
             }, 3000);  // Change slide every 3 seconds
+
+            function closeMessage() {
+            var messageBox = document.querySelector('.message-box');
+            messageBox.style.display = 'none';
+        }
         </script>
     </body>
 </html>
