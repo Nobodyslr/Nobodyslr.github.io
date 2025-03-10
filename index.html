@@ -1,37 +1,63 @@
-<html>
-    <head>
-        <title>Portfolio</title>
-        <style>
-            footer{
-                background-color: black;
-                color: white;
-                padding: 5px 5px 5px 5px;
-                text-align: center;
-            }
-            body{
-                background:rgb(255, 255, 255);
-                margin: 0%;
-            }
-            nav{
-                text-align: end;
-                align-content: center;
-                
-            }
-            img{
-                height: 150px;
-                width: 460px;
-            }
-            
+
+<html >
+<head>
+    <title>Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(255, 255, 255);
+        }
+
+        #container {
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        #n {
+            display: flex;
+            justify-content: space-between;
+            grid-template-columns: auto auto;
+        }
+
+        nav {
+            text-align: end;
+            align-content: center;
+        }
+
+        a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: greenyellow;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            padding: 5px;
+            text-align: center;
+        }
+
+        header {
+            position: relative;
+        }
+
         .slider {
             display: flex;
             transition: transform 0.5s ease-in-out;
         }
+
         .slide {
             min-width: 100%;
-            height: 300px;
+            height: 600px;
             object-fit: cover;
         }
-        .prev, .next {
+
+        .prev,
+        .next {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
@@ -43,39 +69,99 @@
             border: none;
             border-radius: 50%;
         }
+
         .prev {
             left: 10px;
         }
+
         .next {
             right: 10px;
         }
-        a{
-            color: rgb(255, 255, 255);
+
+        .submit-btn {
+            background-color: rgb(22, 82, 247);
+            color: white;
+            font-size: medium;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+
         }
-        </style>
-    </head>
-    <body><div id="a" style="background-color: rgb(0, 0, 0) ; color: white; padding: 5px;" >
+        section{
+            border: 2px solid rgb(0, 0, 0);
+            padding-right:2px ;
+            background-color: #ccc;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        section {
+            width: 48%;
+            margin-bottom: 20px;
+        }
+
+        .box {
+            padding-left: 5px;
+        }
+
+        form input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 10px 20px;
+            background-color: rgb(22, 82, 247);
+            color: white;
+            font-size: medium;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #no{
+            background-color: white;
+            border: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="a" style="background-color: rgb(0, 0, 0); color: white; padding: 10px;">
         <h1>My Portfolio</h1>
         <nav>
-            <a href="#home">Home</a>&nbsp; &nbsp; 
-            <a href="#about">About Me</a>&nbsp; &nbsp; 
-            <a href="#education">Education</a>&nbsp; &nbsp; 
-            <a href="#contact">Contact</a>&nbsp; &nbsp; 
+            <a href="#home">Home</a>&nbsp;&nbsp;
+            <a href="#about">About Me</a>&nbsp;&nbsp;
+            <a href="#education">Education</a>&nbsp;&nbsp;
+            <a href="#Professional">Professional History</a>&nbsp;&nbsp;
+            <a href="#contact">Contact</a>&nbsp;&nbsp;
         </nav>
-        </div><div>
+    </div>
 
-        <header>
-            <div class="slider" >
+    <header>
+        <div class="slider">
             <img src="https://th.bing.com/th/id/R.a039909fc9dc59b37c0c989f53d61bad?rik=X5RzfbvRtO%2feuA&pid=ImgRaw&r=0" alt="Image 1" class="slide">
             <img src="https://cdn.pixabay.com/photo/2022/09/27/19/46/ai-generated-7483596_960_720.jpg" alt="Image 2" class="slide">
             <img src="https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3Vwd2s2MTc3Nzk0MS13aWtpbWVkaWEtaW1hZ2Uta293YnN1MHYuanBn.jpg" alt="Image 3" class="slide">
         </div>
-        </header>
-        <div >
+
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </header>
+
+    <div class="container">
+        <div id="n">
             <section id="about">
-                <h2 >About Me</h2>
-                <p>Hello! I'm Lovson Maharjan, a passionate  Web Developer based in Sunakothi,Lalitpur. I specialize in Website designing. I enjoy working on creative and challenging projects that push me to learn and grow.</p>
-                <p>Feel free to explore my work below or get in touch with me through the contact section.</p>
+                <h2>About Me</h2>
+                <p>Hello! I'm Lovson Maharjan, a passionate Web Developer based in Sunakothi, Lalitpur. I specialize in Website designing. I enjoy working on creative and challenging projects that push me to learn and grow.</p>
             </section>
 
             <section id="education">
@@ -86,49 +172,66 @@
                     <li><strong>SEE</strong> - ABC</li>
                 </ul>
             </section>
-    
-            <section>
-                <h2>Professional History</h2>
-                <ul>
-                    <li><strong>Project 1:</strong> Developer.</li>
-                    <li><strong>Project 2:</strong> Editing.</li>
-                    <li><strong>Project 3:</strong> Graphics editing.</li>
-                </ul>
-            </section>
-    
-            <section id="contact">
-                <h2>Contact me</h2>
-                <p>If you have any questions or would like to work with me, feel free to reach out:</p>
-                <p>Email: <a href="lovson@gmail.com" style="color: blue;">lovson@gmail.com</a></p>
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/lovson-maharjan" style="color: blue;" target="_blank">Lovson Maharjan</a></p>
-            </section>
         </div>
-    
-        <footer>
-            <p>&copy; 2025 Lovson. All rights reserved.</p>
-        </footer>
-        <script>
-            let index = 0;
-    
-            function moveSlide(step) {
-                const slides = document.querySelectorAll('.slide');
-                const totalSlides = slides.length;
-    
-                index += step;
-    
-                if (index >= totalSlides) {
-                    index = 0;
-                } else if (index < 0) {
-                    index = totalSlides - 1;
-                }
-    
-                document.querySelector('.slider').style.transform = `translateX(-${index * 100}%)`;
+
+        <section id="Professional">
+            <h2>Professional History</h2>
+            <ul>
+                <li>Software Developer with over 5 years of experience in software development, web development, and IT solutions.</li>
+                <li>Experienced in working with modern programming languages such as JavaScript, Python, and C++</li>
+                <li>Dedicated to solving complex technical challenges and delivering high-quality user-centric solutions.</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>If you have any questions or would like to work with me, feel free to reach out:</p>
+            <p>Email: <a href="mailto:lovsonmhj@gmail.com" style="color: blue;">lovsonmhj@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/lovson-mhj-691b37354/" style="color: blue;" target="_blank">Lovson Maharjan</a></p>
+        </section>
+
+        <section id="no">
+            <h2>Feedback Form</h2>
+            <form>
+                <label for="name">Your Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
+
+                <label for="email">Your Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>
+
+                <label for="message">Your Feedback:</label><br>
+                <input type="text" placeholder="Write your feedback here" required><br><br>
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Lovson. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let index = 0;
+
+        function moveSlide(step) {
+            const slides = document.querySelectorAll('.slide');
+            const totalSlides = slides.length;
+
+            index += step;
+
+            if (index >= totalSlides) {
+                index = 0;
+            } else if (index < 0) {
+                index = totalSlides - 1;
             }
-    
-            // Optional: Auto sliding after a specific time
-            setInterval(() => {
-                moveSlide(1);
-            }, 3000);  // Change slide every 3 seconds
-        </script>
-    </body>
+
+            document.querySelector('.slider').style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        setInterval(() => {
+            moveSlide(1);
+        }, 3000);
+    </script>
+</body>
 </html>
